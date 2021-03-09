@@ -19,10 +19,10 @@ void PrintBoard(int board[8][8]) {
 }
 void SetQueen(int i, int j) {
 	for (int x = 0; x < 8; ++x) {
-		++board[x][j]; //âåðòèêàëü 
-		++board[i][x]; //ãîðèçîíòàëü
+		++board[x][j]; //Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»ÑŒ  
+		++board[i][x]; //Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒ
 		int y;
-		//ïî äèàãîíàëÿì 
+		//Ð¿Ð¾ Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»ÑÐ¼ 
 		y = j - i + x;	
 		if ((y >= 0) && (y < 8)) {
 			++board[x][y];
@@ -31,22 +31,22 @@ void SetQueen(int i, int j) {
 		if ((y >= 0) && (y < 8)) {
 			++board[x][y];
 		}
-		board[i][j] = -1; //ñòàâèì ôåðçÿ
+		board[i][j] = -1; //ÑÑ‚Ð°Ð²Ð¸Ð¼ Ñ„ÐµÑ€Ð·Ñ
 	}
 }
 void RemoveQueen(int i, int j) {
 	for (int x = 0; x < 8; ++x){
-		--board[x][j]; // âåðòèêàëü
-		--board[i][x]; // ãîðèçîíòàëü 
+		--board[x][j]; // Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»ÑŒ
+		--board[i][x]; // Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒ 
 		int y; 
-		//ïî äèàãîíàëÿì 
+		//Ð¿Ð¾ Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»ÑÐ¼ 
 		y = j - i + x;
 		if (y >= 0 && y < 8)
 			--board[x][y];
 		y = j + i - x;
 		if (y >= 0 && y < 8)
 			--board[x][y];
-		board[i][j] = 0; // óáèðàåì ôåðçÿ 
+		board[i][j] = 0; // //ÑÑ‚Ð°Ð²Ð¸Ð¼ Ñ„ÐµÑ€Ð·Ñ 
 	}
 }
 bool TryQueen(int i) {
